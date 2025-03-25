@@ -1,0 +1,565 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.evChargingApp"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="35" />
+10    <!-- Internet Permission -->
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:5:22-64
+12
+13    <!-- Location Permissions -->
+14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+14-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:8:5-78
+14-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:8:22-76
+15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+15-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:9:5-80
+15-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:9:22-78
+16
+17    <!-- Camera Permission for QR Scanner -->
+18    <uses-permission android:name="android.permission.CAMERA" />
+18-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:12:5-64
+18-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:12:22-62
+19
+20    <!-- External Storage Permission -->
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+21-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:15:5-80
+21-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:15:22-78
+22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+22-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:16:5-79
+22-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:16:22-77
+23
+24    <queries>
+24-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:52:5-57:15
+25        <intent>
+25-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:53:9-56:18
+26            <action android:name="android.intent.action.PROCESS_TEXT" />
+26-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:54:13-72
+26-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:54:21-70
+27
+28            <data android:mimeType="text/plain" />
+28-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:55:13-50
+28-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:55:19-48
+29        </intent>
+30        <!-- Needs to be explicitly declared on Android R+ -->
+31        <package android:name="com.google.android.apps.maps" />
+31-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\c462ba934907f340923a18eec83dd98a\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:9-64
+31-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\c462ba934907f340923a18eec83dd98a\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:33:18-61
+32    </queries>
+33    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+34    <!-- <uses-sdk android:minSdkVersion="21" /> -->
+35    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+35-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:10:5-79
+35-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:10:22-76
+36
+37    <uses-feature
+37-->[:mobile_scanner] C:\Users\Moe_k\flutter\ev_charging_station\build\mobile_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-11:36
+38        android:name="android.hardware.camera"
+38-->[:mobile_scanner] C:\Users\Moe_k\flutter\ev_charging_station\build\mobile_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-47
+39        android:required="false" />
+39-->[:mobile_scanner] C:\Users\Moe_k\flutter\ev_charging_station\build\mobile_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:11:9-33
+40
+41    <uses-permission android:name="android.permission.VIBRATE" />
+41-->[:flutter_local_notifications] C:\Users\Moe_k\flutter\ev_charging_station\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:7:5-66
+41-->[:flutter_local_notifications] C:\Users\Moe_k\flutter\ev_charging_station\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:7:22-63
+42    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+42-->[:flutter_local_notifications] C:\Users\Moe_k\flutter\ev_charging_station\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:8:5-77
+42-->[:flutter_local_notifications] C:\Users\Moe_k\flutter\ev_charging_station\build\flutter_local_notifications\intermediates\merged_manifest\release\AndroidManifest.xml:8:22-74
+43
+44    <uses-feature
+44-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\c462ba934907f340923a18eec83dd98a\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:26:5-28:35
+45        android:glEsVersion="0x00020000"
+45-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\c462ba934907f340923a18eec83dd98a\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:27:9-41
+46        android:required="true" />
+46-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\c462ba934907f340923a18eec83dd98a\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:28:9-32
+47
+48    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+48-->[com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\Moe_k\.gradle\caches\transforms-4\e23ef785fc91428ecb0aaf8784419ba7\transformed\jetified-recaptcha-18.6.1\AndroidManifest.xml:9:5-98
+48-->[com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\Moe_k\.gradle\caches\transforms-4\e23ef785fc91428ecb0aaf8784419ba7\transformed\jetified-recaptcha-18.6.1\AndroidManifest.xml:9:22-95
+49
+50    <permission
+50-->[androidx.core:core:1.13.1] C:\Users\Moe_k\.gradle\caches\transforms-4\778f63454244b3cc1ef761146977f678\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+51        android:name="com.example.evChargingApp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+51-->[androidx.core:core:1.13.1] C:\Users\Moe_k\.gradle\caches\transforms-4\778f63454244b3cc1ef761146977f678\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+52        android:protectionLevel="signature" />
+52-->[androidx.core:core:1.13.1] C:\Users\Moe_k\.gradle\caches\transforms-4\778f63454244b3cc1ef761146977f678\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+53
+54    <uses-permission android:name="com.example.evChargingApp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+54-->[androidx.core:core:1.13.1] C:\Users\Moe_k\.gradle\caches\transforms-4\778f63454244b3cc1ef761146977f678\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+54-->[androidx.core:core:1.13.1] C:\Users\Moe_k\.gradle\caches\transforms-4\778f63454244b3cc1ef761146977f678\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+55
+56    <application
+57        android:name="android.app.Application"
+57-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:20:9-42
+58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+58-->[androidx.core:core:1.13.1] C:\Users\Moe_k\.gradle\caches\transforms-4\778f63454244b3cc1ef761146977f678\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+59        android:enableOnBackInvokedCallback="true"
+59-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:22:9-51
+60        android:extractNativeLibs="false"
+61        android:icon="@mipmap/ic_launcher"
+61-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:21:9-43
+62        android:label="greenwheelstation" >
+62-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:19:9-42
+63
+64        <!-- Google Maps API Key -->
+65        <meta-data
+65-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:26:9-28:70
+66            android:name="com.google.android.geo.API_KEY"
+66-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:27:13-58
+67            android:value="AIzaSyAUCICDqqPIkZnVq0vimeCYZqtYltXZ-AU" />
+67-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:28:13-68
+68
+69        <activity
+69-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:30:9-47:20
+70            android:name="com.example.evChargingApp.MainActivity"
+70-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:31:13-41
+71            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+71-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:36:13-163
+72            android:exported="true"
+72-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:32:13-36
+73            android:hardwareAccelerated="true"
+73-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:37:13-47
+74            android:launchMode="singleTop"
+74-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:33:13-43
+75            android:taskAffinity=""
+75-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:34:13-36
+76            android:theme="@style/LaunchTheme"
+76-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:35:13-47
+77            android:windowSoftInputMode="adjustResize" >
+77-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:38:13-55
+78            <meta-data
+78-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:39:13-42:17
+79                android:name="io.flutter.embedding.android.NormalTheme"
+79-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:40:15-70
+80                android:resource="@style/NormalTheme" />
+80-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:41:15-52
+81
+82            <intent-filter>
+82-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:43:13-46:29
+83                <action android:name="android.intent.action.MAIN" />
+83-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:44:17-68
+83-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:44:25-66
+84
+85                <category android:name="android.intent.category.LAUNCHER" />
+85-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:45:17-76
+85-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:45:27-74
+86            </intent-filter>
+87        </activity>
+88
+89        <meta-data
+89-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:48:9-50:33
+90            android:name="flutterEmbedding"
+90-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:49:13-44
+91            android:value="2" />
+91-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:50:13-30
+92
+93        <service
+93-->[:cloud_firestore] C:\Users\Moe_k\flutter\ev_charging_station\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:8:9-12:19
+94            android:name="com.google.firebase.components.ComponentDiscoveryService"
+94-->[:cloud_firestore] C:\Users\Moe_k\flutter\ev_charging_station\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:8:18-89
+95            android:directBootAware="true"
+95-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+96            android:exported="false" >
+96-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:16:13-37
+97            <meta-data
+97-->[:cloud_firestore] C:\Users\Moe_k\flutter\ev_charging_station\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-11:85
+98                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+98-->[:cloud_firestore] C:\Users\Moe_k\flutter\ev_charging_station\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:10:17-134
+99                android:value="com.google.firebase.components.ComponentRegistrar" />
+99-->[:cloud_firestore] C:\Users\Moe_k\flutter\ev_charging_station\build\cloud_firestore\intermediates\merged_manifest\release\AndroidManifest.xml:11:17-82
+100            <meta-data
+100-->[:firebase_auth] C:\Users\Moe_k\flutter\ev_charging_station\build\firebase_auth\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-11:85
+101                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+101-->[:firebase_auth] C:\Users\Moe_k\flutter\ev_charging_station\build\firebase_auth\intermediates\merged_manifest\release\AndroidManifest.xml:10:17-124
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[:firebase_auth] C:\Users\Moe_k\flutter\ev_charging_station\build\firebase_auth\intermediates\merged_manifest\release\AndroidManifest.xml:11:17-82
+103            <meta-data
+103-->[:firebase_core] C:\Users\Moe_k\flutter\ev_charging_station\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-11:85
+104                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+104-->[:firebase_core] C:\Users\Moe_k\flutter\ev_charging_station\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:10:17-124
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[:firebase_core] C:\Users\Moe_k\flutter\ev_charging_station\build\firebase_core\intermediates\merged_manifest\release\AndroidManifest.xml:11:17-82
+106            <meta-data
+106-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:17:13-19:85
+107                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+107-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:18:17-122
+108                android:value="com.google.firebase.components.ComponentRegistrar" />
+108-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:19:17-82
+109            <meta-data
+109-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:20:13-22:85
+110                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+110-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:21:17-111
+111                android:value="com.google.firebase.components.ComponentRegistrar" />
+111-->[com.google.firebase:firebase-firestore:25.1.2] C:\Users\Moe_k\.gradle\caches\transforms-4\1da77976aecc4d991e7935d8a18149a0\transformed\jetified-firebase-firestore-25.1.2\AndroidManifest.xml:22:17-82
+112            <meta-data
+112-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:69:13-71:85
+113                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+113-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:70:17-109
+114                android:value="com.google.firebase.components.ComponentRegistrar" />
+114-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:71:17-82
+115            <meta-data
+115-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\73273c443da1900483991bd3e38d11b2\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+116                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+116-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\73273c443da1900483991bd3e38d11b2\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+117                android:value="com.google.firebase.components.ComponentRegistrar" />
+117-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\73273c443da1900483991bd3e38d11b2\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+118            <meta-data
+118-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+119                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+119-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+120                android:value="com.google.firebase.components.ComponentRegistrar" />
+120-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+121        </service>
+122
+123        <activity
+123-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:29:9-46:20
+124            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+124-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:30:13-80
+125            android:excludeFromRecents="true"
+125-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:31:13-46
+126            android:exported="true"
+126-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:32:13-36
+127            android:launchMode="singleTask"
+127-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:33:13-44
+128            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+128-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:34:13-72
+129            <intent-filter>
+129-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:35:13-45:29
+130                <action android:name="android.intent.action.VIEW" />
+130-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:36:17-69
+130-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:36:25-66
+131
+132                <category android:name="android.intent.category.DEFAULT" />
+132-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:38:17-76
+132-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:38:27-73
+133                <category android:name="android.intent.category.BROWSABLE" />
+133-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:39:17-78
+133-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:39:27-75
+134
+135                <data
+135-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:55:13-50
+136                    android:host="firebase.auth"
+137                    android:path="/"
+138                    android:scheme="genericidp" />
+139            </intent-filter>
+140        </activity>
+141        <activity
+141-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:47:9-64:20
+142            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+142-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:48:13-79
+143            android:excludeFromRecents="true"
+143-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:49:13-46
+144            android:exported="true"
+144-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:50:13-36
+145            android:launchMode="singleTask"
+145-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:51:13-44
+146            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+146-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:52:13-72
+147            <intent-filter>
+147-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:53:13-63:29
+148                <action android:name="android.intent.action.VIEW" />
+148-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:36:17-69
+148-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:36:25-66
+149
+150                <category android:name="android.intent.category.DEFAULT" />
+150-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:38:17-76
+150-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:38:27-73
+151                <category android:name="android.intent.category.BROWSABLE" />
+151-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:39:17-78
+151-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ceb9f477e68c67139cc36975b5bd7d9f\transformed\jetified-firebase-auth-23.2.0\AndroidManifest.xml:39:27-75
+152
+153                <data
+153-->C:\Users\Moe_k\flutter\ev_charging_station\android\app\src\main\AndroidManifest.xml:55:13-50
+154                    android:host="firebase.auth"
+155                    android:path="/"
+156                    android:scheme="recaptcha" />
+157            </intent-filter>
+158        </activity>
+159
+160        <provider
+160-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+161            android:name="com.google.firebase.provider.FirebaseInitProvider"
+161-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+162            android:authorities="com.example.evChargingApp.firebaseinitprovider"
+162-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+163            android:directBootAware="true"
+163-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+164            android:exported="false"
+164-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+165            android:initOrder="100" />
+165-->[com.google.firebase:firebase-common:21.0.0] C:\Users\Moe_k\.gradle\caches\transforms-4\d90f3b6d93122774c0ae046e3d881b86\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+166
+167        <service
+167-->[:geolocator_android] C:\Users\Moe_k\flutter\ev_charging_station\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:8:9-12:56
+168            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+168-->[:geolocator_android] C:\Users\Moe_k\flutter\ev_charging_station\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-77
+169            android:enabled="true"
+169-->[:geolocator_android] C:\Users\Moe_k\flutter\ev_charging_station\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:13-35
+170            android:exported="false"
+170-->[:geolocator_android] C:\Users\Moe_k\flutter\ev_charging_station\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-37
+171            android:foregroundServiceType="location" />
+171-->[:geolocator_android] C:\Users\Moe_k\flutter\ev_charging_station\build\geolocator_android\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-53
+172
+173        <activity
+173-->[:url_launcher_android] C:\Users\Moe_k\flutter\ev_charging_station\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:8:9-11:74
+174            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+174-->[:url_launcher_android] C:\Users\Moe_k\flutter\ev_charging_station\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-74
+175            android:exported="false"
+175-->[:url_launcher_android] C:\Users\Moe_k\flutter\ev_charging_station\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:10:13-37
+176            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+176-->[:url_launcher_android] C:\Users\Moe_k\flutter\ev_charging_station\build\url_launcher_android\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-71
+177        <!--
+178        Service for holding metadata. Cannot be instantiated.
+179        Metadata will be merged from other manifests.
+180        -->
+181        <service
+181-->[androidx.camera:camera-core:1.3.4] C:\Users\Moe_k\.gradle\caches\transforms-4\c7b5442559b2267609d3c0974c455949\transformed\jetified-camera-core-1.3.4\AndroidManifest.xml:29:9-33:78
+182            android:name="androidx.camera.core.impl.MetadataHolderService"
+182-->[androidx.camera:camera-core:1.3.4] C:\Users\Moe_k\.gradle\caches\transforms-4\c7b5442559b2267609d3c0974c455949\transformed\jetified-camera-core-1.3.4\AndroidManifest.xml:30:13-75
+183            android:enabled="false"
+183-->[androidx.camera:camera-core:1.3.4] C:\Users\Moe_k\.gradle\caches\transforms-4\c7b5442559b2267609d3c0974c455949\transformed\jetified-camera-core-1.3.4\AndroidManifest.xml:31:13-36
+184            android:exported="false" >
+184-->[androidx.camera:camera-core:1.3.4] C:\Users\Moe_k\.gradle\caches\transforms-4\c7b5442559b2267609d3c0974c455949\transformed\jetified-camera-core-1.3.4\AndroidManifest.xml:32:13-37
+185            <meta-data
+185-->[androidx.camera:camera-camera2:1.3.4] C:\Users\Moe_k\.gradle\caches\transforms-4\8061e516e4d3b9b16588559d49da4af4\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:30:13-32:89
+186                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+186-->[androidx.camera:camera-camera2:1.3.4] C:\Users\Moe_k\.gradle\caches\transforms-4\8061e516e4d3b9b16588559d49da4af4\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:31:17-103
+187                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+187-->[androidx.camera:camera-camera2:1.3.4] C:\Users\Moe_k\.gradle\caches\transforms-4\8061e516e4d3b9b16588559d49da4af4\transformed\jetified-camera-camera2-1.3.4\AndroidManifest.xml:32:17-86
+188        </service>
+189        <service
+189-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+190            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+190-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+191            android:enabled="true"
+191-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+192            android:exported="false" >
+192-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+193            <meta-data
+193-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+194                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+194-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+195                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+195-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+196        </service>
+197
+198        <activity
+198-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+199            android:name="androidx.credentials.playservices.HiddenActivity"
+199-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+200            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+200-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+201            android:enabled="true"
+201-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+202            android:exported="false"
+202-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+203            android:fitsSystemWindows="true"
+203-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+204            android:theme="@style/Theme.Hidden" >
+204-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\Moe_k\.gradle\caches\transforms-4\0bbe882425bcfe6e79e7edb0d629f948\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+205        </activity>
+206        <activity
+206-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:23:9-27:75
+207            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+207-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:24:13-93
+208            android:excludeFromRecents="true"
+208-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:25:13-46
+209            android:exported="false"
+209-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:26:13-37
+210            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+210-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:27:13-72
+211        <!--
+212            Service handling Google Sign-In user revocation. For apps that do not integrate with
+213            Google Sign-In, this service will never be started.
+214        -->
+215        <service
+215-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:33:9-37:51
+216            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+216-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:34:13-89
+217            android:exported="true"
+217-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:35:13-36
+218            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+218-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:36:13-107
+219            android:visibleToInstantApps="true" /> <!-- Needs to be explicitly declared on P+ -->
+219-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\833b16ec80b987937a46fa8a798a3eb2\transformed\jetified-play-services-auth-21.3.0\AndroidManifest.xml:37:13-48
+220        <uses-library
+220-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\c462ba934907f340923a18eec83dd98a\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:39:9-41:40
+221            android:name="org.apache.http.legacy"
+221-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\c462ba934907f340923a18eec83dd98a\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:40:13-50
+222            android:required="false" />
+222-->[com.google.android.gms:play-services-maps:18.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\c462ba934907f340923a18eec83dd98a\transformed\jetified-play-services-maps-18.2.0\AndroidManifest.xml:41:13-37
+223
+224        <service
+224-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\6c81eb825d66b15d7c924bac15928aa9\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:9:9-15:19
+225            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+225-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\6c81eb825d66b15d7c924bac15928aa9\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:10:13-91
+226            android:directBootAware="true"
+226-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:17:13-43
+227            android:exported="false" >
+227-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\6c81eb825d66b15d7c924bac15928aa9\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:11:13-37
+228            <meta-data
+228-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\6c81eb825d66b15d7c924bac15928aa9\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:12:13-14:85
+229                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+229-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\6c81eb825d66b15d7c924bac15928aa9\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:13:17-120
+230                android:value="com.google.firebase.components.ComponentRegistrar" />
+230-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\6c81eb825d66b15d7c924bac15928aa9\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:14:17-82
+231            <meta-data
+231-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\fc69cea4b9a95e42a95d64d33bde133f\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:12:13-14:85
+232                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+232-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\fc69cea4b9a95e42a95d64d33bde133f\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:13:17-124
+233                android:value="com.google.firebase.components.ComponentRegistrar" />
+233-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Moe_k\.gradle\caches\transforms-4\fc69cea4b9a95e42a95d64d33bde133f\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:14:17-82
+234            <meta-data
+234-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:20:13-22:85
+235                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+235-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:21:17-120
+236                android:value="com.google.firebase.components.ComponentRegistrar" />
+236-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:22:17-82
+237        </service>
+238
+239        <provider
+239-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:9:9-13:38
+240            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+240-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:10:13-78
+241            android:authorities="com.example.evChargingApp.mlkitinitprovider"
+241-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:11:13-69
+242            android:exported="false"
+242-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:12:13-37
+243            android:initOrder="99" />
+243-->[com.google.mlkit:common:18.9.0] C:\Users\Moe_k\.gradle\caches\transforms-4\e550274a211b1033aeaaab49e85915e1\transformed\jetified-common-18.9.0\AndroidManifest.xml:13:13-35
+244
+245        <activity
+245-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ce94b0cfc87e83b68393ce9d66b7180e\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+246            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+246-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ce94b0cfc87e83b68393ce9d66b7180e\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+247            android:exported="false"
+247-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ce94b0cfc87e83b68393ce9d66b7180e\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+248            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+248-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Moe_k\.gradle\caches\transforms-4\ce94b0cfc87e83b68393ce9d66b7180e\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+249
+250        <uses-library
+250-->[androidx.window:window:1.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\78df177dfee9cd02f107cef571605bf4\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+251            android:name="androidx.window.extensions"
+251-->[androidx.window:window:1.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\78df177dfee9cd02f107cef571605bf4\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+252            android:required="false" />
+252-->[androidx.window:window:1.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\78df177dfee9cd02f107cef571605bf4\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+253        <uses-library
+253-->[androidx.window:window:1.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\78df177dfee9cd02f107cef571605bf4\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+254            android:name="androidx.window.sidecar"
+254-->[androidx.window:window:1.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\78df177dfee9cd02f107cef571605bf4\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+255            android:required="false" />
+255-->[androidx.window:window:1.2.0] C:\Users\Moe_k\.gradle\caches\transforms-4\78df177dfee9cd02f107cef571605bf4\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+256
+257        <meta-data
+257-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Moe_k\.gradle\caches\transforms-4\0808169ab89464488d7ced62dd8b8766\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+258            android:name="com.google.android.gms.version"
+258-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Moe_k\.gradle\caches\transforms-4\0808169ab89464488d7ced62dd8b8766\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+259            android:value="@integer/google_play_services_version" />
+259-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Moe_k\.gradle\caches\transforms-4\0808169ab89464488d7ced62dd8b8766\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+260
+261        <provider
+261-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Moe_k\.gradle\caches\transforms-4\2402f35d390d753fb194b6b298ad18e9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+262            android:name="androidx.startup.InitializationProvider"
+262-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Moe_k\.gradle\caches\transforms-4\2402f35d390d753fb194b6b298ad18e9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+263            android:authorities="com.example.evChargingApp.androidx-startup"
+263-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Moe_k\.gradle\caches\transforms-4\2402f35d390d753fb194b6b298ad18e9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+264            android:exported="false" >
+264-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Moe_k\.gradle\caches\transforms-4\2402f35d390d753fb194b6b298ad18e9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+265            <meta-data
+265-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Moe_k\.gradle\caches\transforms-4\2402f35d390d753fb194b6b298ad18e9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+266                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+266-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Moe_k\.gradle\caches\transforms-4\2402f35d390d753fb194b6b298ad18e9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+267                android:value="androidx.startup" />
+267-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Moe_k\.gradle\caches\transforms-4\2402f35d390d753fb194b6b298ad18e9\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+268            <meta-data
+268-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+269                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+269-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+270                android:value="androidx.startup" />
+270-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+271        </provider>
+272
+273        <receiver
+273-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+274            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+274-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+275            android:directBootAware="false"
+275-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+276            android:enabled="true"
+276-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+277            android:exported="true"
+277-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+278            android:permission="android.permission.DUMP" >
+278-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+279            <intent-filter>
+279-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+280                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+280-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+280-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+281            </intent-filter>
+282            <intent-filter>
+282-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+283                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+283-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+283-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+284            </intent-filter>
+285            <intent-filter>
+285-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+286                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+286-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+286-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+287            </intent-filter>
+288            <intent-filter>
+288-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+289                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+289-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+289-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Moe_k\.gradle\caches\transforms-4\28b4b4d8d507ec41f60b787ff067d920\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+290            </intent-filter>
+291        </receiver>
+292
+293        <service
+293-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moe_k\.gradle\caches\transforms-4\152baba2db312703369340aefc0b48d9\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+294            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+294-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moe_k\.gradle\caches\transforms-4\152baba2db312703369340aefc0b48d9\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+295            android:exported="false" >
+295-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moe_k\.gradle\caches\transforms-4\152baba2db312703369340aefc0b48d9\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+296            <meta-data
+296-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moe_k\.gradle\caches\transforms-4\152baba2db312703369340aefc0b48d9\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+297                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+297-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moe_k\.gradle\caches\transforms-4\152baba2db312703369340aefc0b48d9\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+298                android:value="cct" />
+298-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Moe_k\.gradle\caches\transforms-4\152baba2db312703369340aefc0b48d9\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+299        </service>
+300        <service
+300-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Moe_k\.gradle\caches\transforms-4\6bcaf988cf2fa13f05870a929e7c9d4b\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+301            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+301-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Moe_k\.gradle\caches\transforms-4\6bcaf988cf2fa13f05870a929e7c9d4b\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+302            android:exported="false"
+302-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Moe_k\.gradle\caches\transforms-4\6bcaf988cf2fa13f05870a929e7c9d4b\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+303            android:permission="android.permission.BIND_JOB_SERVICE" >
+303-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Moe_k\.gradle\caches\transforms-4\6bcaf988cf2fa13f05870a929e7c9d4b\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+304        </service>
+305
+306        <receiver
+306-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Moe_k\.gradle\caches\transforms-4\6bcaf988cf2fa13f05870a929e7c9d4b\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+307            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+307-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Moe_k\.gradle\caches\transforms-4\6bcaf988cf2fa13f05870a929e7c9d4b\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+308            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+308-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Moe_k\.gradle\caches\transforms-4\6bcaf988cf2fa13f05870a929e7c9d4b\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+309        <activity
+309-->[com.google.android.play:core-common:2.0.3] C:\Users\Moe_k\.gradle\caches\transforms-4\6f388ec1caefcdf16a036db3645bcd86\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+310            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+310-->[com.google.android.play:core-common:2.0.3] C:\Users\Moe_k\.gradle\caches\transforms-4\6f388ec1caefcdf16a036db3645bcd86\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:15:13-93
+311            android:exported="false"
+311-->[com.google.android.play:core-common:2.0.3] C:\Users\Moe_k\.gradle\caches\transforms-4\6f388ec1caefcdf16a036db3645bcd86\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:16:13-37
+312            android:stateNotNeeded="true"
+312-->[com.google.android.play:core-common:2.0.3] C:\Users\Moe_k\.gradle\caches\transforms-4\6f388ec1caefcdf16a036db3645bcd86\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:17:13-42
+313            android:theme="@style/Theme.PlayCore.Transparent" />
+313-->[com.google.android.play:core-common:2.0.3] C:\Users\Moe_k\.gradle\caches\transforms-4\6f388ec1caefcdf16a036db3645bcd86\transformed\jetified-core-common-2.0.3\AndroidManifest.xml:18:13-62
+314    </application>
+315
+316</manifest>

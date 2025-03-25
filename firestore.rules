@@ -1,0 +1,39 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if user is accessing their own data
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+      
+      // Subcollection for favorite stations
+      match /favoriteStations/{stationId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // Charging stations collection
+    match /stations/{stationId} {
+      // Allow read access to all authenticated users
+      allow read: if isAuthenticated();
+      // Only allow write access for demo data initialization
+      allow write: if isAuthenticated() && 
+                  request.resource.data.isDemoStation == true;
+    }
+
+    // Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

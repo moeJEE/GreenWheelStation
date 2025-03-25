@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"> <!-- Add this line to include tools namespace -->
+
+    <!-- Rest of your manifest -->
+
+    <application>
+        <!-- Google Maps API Key with override -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAUCICDqqPIkZnVq0vimeCYZqtYltXZ-AU"
+            tools:replace="android:value" />
+    </application>
+</manifest>

@@ -1,0 +1,38 @@
+<variant
+    name="release"
+    package="com.example.evChargingApp"
+    minSdkVersion="23"
+    targetSdkVersion="35"
+    shrinking="true"
+    mergedManifest="C:\Users\Moe_k\flutter\ev_charging_station\build\app\intermediates\merged_manifest\release\AndroidManifest.xml"
+    proguardFiles="C:\Users\Moe_k\flutter\ev_charging_station\build\app\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.2.1;C:\flutter\src\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro;C:\Users\Moe_k\flutter\ev_charging_station\build\app\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.2.1;proguard-rules.pro"
+    partialResultsDir="C:\Users\Moe_k\flutter\ev_charging_station\build\app\intermediates\lint_vital_partial_results\release\out"
+    desugaredMethodsFiles="C:\Users\Moe_k\.gradle\caches\transforms-4\0e99a014f85d5e5c7ae11da0af857c83\transformed\desugar_jdk_libs_configuration-2.0.4-desugar-lint.txt;C:\Users\Moe_k\.gradle\caches\transforms-4\dfd832ea832e716ad75e725fd92986e7\transformed\D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      coreLibraryDesugaring="true"
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src\main\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\main\kotlin;src\release\java;src\release\kotlin"
+        resDirectories="src\main\res;src\release\res"
+        assetsDirectories="src\main\assets;src\release\assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <manifestPlaceholders>
+    <placeholder
+        name="applicationName"
+        value="android.app.Application" />
+  </manifestPlaceholders>
+  <artifact
+      classOutputs="C:\Users\Moe_k\flutter\ev_charging_station\build\app\intermediates\javac\release\classes;C:\Users\Moe_k\flutter\ev_charging_station\build\app\tmp\kotlin-classes\release;C:\Users\Moe_k\flutter\ev_charging_station\build\app\kotlinToolingMetadata;C:\Users\Moe_k\flutter\ev_charging_station\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
+      type="MAIN"
+      applicationId="com.example.evChargingApp"
+      generatedSourceFolders="C:\Users\Moe_k\flutter\ev_charging_station\build\app\generated\ap_generated_sources\release\out"
+      generatedResourceFolders="C:\Users\Moe_k\flutter\ev_charging_station\build\app\generated\res\resValues\release"
+      desugaredMethodsFiles="C:\Users\Moe_k\.gradle\caches\transforms-4\0e99a014f85d5e5c7ae11da0af857c83\transformed\desugar_jdk_libs_configuration-2.0.4-desugar-lint.txt;C:\Users\Moe_k\.gradle\caches\transforms-4\dfd832ea832e716ad75e725fd92986e7\transformed\D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>
